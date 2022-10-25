@@ -10,7 +10,16 @@ window.onload = function(){
 //------DESDE AQUÍ CONTINÚE CON LAS VALIDACIONES DEL FORMULARIO //
 //-------------------DE REGISTRO DE PELÍCULAS------------------//    
 
+formulario.addEventListener("submit", (e)=>{
+    e.preventDefault()
 
+    let campoTitulo = document.querySelector("input.name")
+
+    if(campoTitulo.value == ""){
+        alert("El campo de titulo tiene que estar completo")
+    }
+
+})
 
 
 }
