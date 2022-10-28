@@ -13,16 +13,49 @@ window.onload = function(){
 formulario.addEventListener("submit", (e)=>{
     e.preventDefault()
 
-    let campoTitulo = document.querySelector("input.claseName")
+    let campoTitulo = document.querySelector("#title")
+    let campoReiting = document.querySelector("#rating")
+    let premios = document.querySelector("#awards")
+    let fecha = document.querySelector("#release_date")
+    let duracion = document.querySelector("#length")
+    let genero = document.querySelector("#genre_id")
+
+    campoTitulo.addEventListener("focus", ()=>{
+            console.log(1)
+     })
+
+     let errores = []
 
     if(campoTitulo.value == ""){
-        alert("El campo de titulo tiene que estar completo")
-    }
-
-    let campoCalificacion = document.querySelector("input.claseCalif")
-    if(campoCalificacion.value == ""){
+       errores.push("El campo Titulo tiene estar lleno")
+        /* campoTitulo.classList.add("is-invalid") */
+       }
+       
+     /* if(errores.length > 0){
+        e.preventDefault()
+     } */
+     
+     
+    if(campoReiting.value == ""){
         alert("El campo de calificación tiene que estar completo")
     }
+
+    if(premios.value == ""){
+        alert("El campo de premios tiene que estar completo")
+    }
+
+    if(fecha.value == ""){
+        alert("El campo de fecha tiene que estar completo")
+    }
+
+    if(duracion.value == ""){
+        alert("El campo de duración tiene que estar completo")
+    }
+
+    if(genero.value == ""){
+        alert("El campo de genero tiene que estar completo")
+    }
+
 })
 
 
